@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://purelyvital.github.io/purelyvital/sitemap.xml
