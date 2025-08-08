@@ -1,142 +1,713 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="pt-br">
 <head>
-    <!-- Optimized Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Science-backed natural supplements for energy renewal, joint pain relief, and hearing support. Formulated with clinically-proven ingredients like Ashwagandha and Boswellia.">
-    <meta name="keywords" content="natural energy supplements, joint pain relief, tinnitus support, ashwagandha benefits, boswellia for joints, glucosamine chondroitin, hearing health supplements">
+    <meta name="description" content="Purely Vital offers natural solutions for energy, joint health, hearing, and well-being. Discover science-based supplements for lasting vitality.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://purelyvital.github.io/purelyvital/" />
     
-    <!-- Enhanced Open Graph Tags -->
-    <meta property="og:title" content="Purely Vital | Natural Solutions for Energy, Joint Pain & Hearing Support">
-    <meta property="og:description" content="Clinically-studied natural supplements featuring Ashwagandha for energy, Boswellia for joints, and Grape Seed Extract for hearing health.">
+    <!-- Open Graph / Social Media Tags -->
+    <meta property="og:title" content="Purely Vitall - Natural Solutions for Well-Being and Vitality">
+    <meta property="og:description" content="Discover natural supplements for energy, joint health, hearing, and overall well-being with Purely Vitall.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://purelyvital.github.io/purelyvital/">
     <meta property="og:image" content="https://purelyvital.github.io/purelyvital/images/og-image.jpg">
-    <meta property="og:site_name" content="Purely Vital">
+    <meta property="og:site_name" content="Purely Vitall">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Natural Solutions for Joint Pain & Energy | Purely Vital">
-    <meta name="twitter:description" content="Non-GMO supplements with Turmeric for joints, Maca Root for energy, and GABA for tinnitus relief. 60-day satisfaction guarantee.">
+    <meta name="twitter:title" content="Purely Vitall - Natural Solutions for Well-Being">
+    <meta name="twitter:description" content="Natural supplements for energy, joints and hearing with scientifically proven ingredients.">
+    <meta name="twitter:image" content="https://purelyvital.github.io/purelyvital/images/twitter-card.jpg">
     
-    <!-- Title with Golden Keywords -->
-    <title>Natural Supplements for Energy, Joint Pain & Hearing Support | Purely Vital</title>
+    <title>Purely Vitall | Natural Solutions for Energy, Joints, and Hearing</title>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Purely Vital",
+      "@type": "Organization",
+      "name": "Purely Vitall",
       "url": "https://purelyvital.github.io/purelyvital/",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://purelyvital.github.io/purelyvital/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
-      }
+      "logo": "https://purelyvital.github.io/purelyvital/images/logo.png",
+      "description": "Supplier of natural supplements for energy, joint health and general well-being.",
+      "sameAs": [
+        "https://www.facebook.com/purelyvitall",
+        "https://www.instagram.com/purelyvitall"
+      ]
     }
     </script>
     
-    <!-- Your existing CSS and fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Your existing CSS remains completely unchanged */
-        .hero-bg { background: linear-gradient(rgba(0, 0, 0, 0.2), url('...'); }
-        /* All other CSS rules preserved exactly */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                        url('https://raw.githubusercontent.com/PurelyVital/purelyvital/refs/heads/main/img/capa-supplier-natural-supplements-energy-joint-health-wellbeing.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .nature-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .benefit-item {
+            transition: all 0.3s ease;
+        }
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .ingredient-card {
+            transition: all 0.3s ease;
+        }
+        .ingredient-card:hover {
+            transform: scale(1.03);
+        }
+        .text-outline {
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+        .section-divider {
+            height: 80px;
+            background: linear-gradient(to bottom, #f8fafc, rgba(248, 250, 252, 0));
+        }
+        .fatigue-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://purelyvital.github.io/purelyvital/img/academia-overcome-chronic-fatigue-energy-vitality.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        .joints-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://purelyvital.github.io/purelyvital/img/joelho-effective-joint-support-pain-inflammation-flexibility.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        .hearing-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://purelyvital.github.io/purelyvital/img/ouvido-natural-hearing-support-tinnitus-cognitive-clarity.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        .joint-pain-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://purelyvital.github.io/purelyvital/img/velhos-holistic-joint-care-pain-recovery-vitality.webp');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Classes para tipografia (mantendo tamanhos originais) */
+        .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-sans {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
     </style>
 </head>
 <body class="font-sans bg-gray-50">
-    <!-- Header (Structure Unchanged, Enhanced Title Attributes) -->
+    <!-- Modern Header -->
     <header class="sticky top-0 bg-white shadow-sm z-50">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
-                <!-- Logo (Added aria-label) -->
-                <div class="flex items-center space-x-3" aria-label="Purely Vital Home">
+                <div class="flex items-center space-x-3">
                     <div class="bg-green-600 rounded-lg p-2 shadow-md">
                         <i class="fas fa-leaf text-white text-xl"></i>
                     </div>
                     <span class="text-2xl font-bold text-green-800 font-serif">Purely<span class="text-green-600">Vital</span></span>
                 </div>
                 
-                <!-- Navigation (Enhanced Link Titles) -->
                 <nav class="hidden md:flex space-x-4">
-                    <a href="#fatigue" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Natural supplements for chronic fatigue and low energy">
+                    <a href="#fatigue" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Soluções naturais para energia e vitalidade">
                         <i class="fas fa-bolt mr-2 text-green-500"></i> Energy
                     </a>
-                    <a href="#joints" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Joint pain relief supplements with Boswellia and Turmeric">
+                    <a href="#joints" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Saúde articular e mobilidade">
                         <i class="fas fa-bone mr-2 text-green-500"></i> Joints
                     </a>
-                    <!-- Other nav items... -->
+                    <a href="#hearing" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Saúde auditiva natural">
+                        <i class="fas fa-ear-listen mr-2 text-green-500"></i> Hearing
+                    </a>
+                    <a href="#joint-pain" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Bem-estar e alívio natural">
+                        <i class="fas fa-hand-holding-medical mr-2 text-green-500"></i> Wellness
+                    </a>
                 </nav>
+                
+                <button class="md:hidden text-gray-700 hover:text-green-600 transition" aria-label="Menu mobile">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section (Structure Unchanged, Enhanced Alt Text) -->
+    <!-- New Hero Section with Light Natural Background -->
     <section class="hero-bg text-white py-20 md:py-32 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/soft-wallpaper.png');"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2 mb-12 lg:mb-0">
-                    <!-- Your existing hero content remains exactly the same -->
+                    <div class="inline-block bg-white/20 backdrop-blur-sm px-4 py-1 rounded-full mb-6">
+                        <span class="text-sm font-semibold font-poppins">NATURAL WELLNESS</span>
+                    </div>
                     <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight font-serif">
-                        <span>Nature's Wisdom</span><br>
+                        <span class="text-outline">Nature's Wisdom</span><br>
                         <span class="text-green-300">For Modern Wellness</span>
                     </h1>
+                    <p class="text-lg md:text-xl mb-8 max-w-lg leading-relaxed font-poppins">
+                        Emily R. – Natural Health Researcher<br><br>
+                        <br>
+                        Driven by curiosity and a deep respect for natural healing, I spent years exploring how the body thrives through holistic care. This journey led me to discover supplement formulas that truly promote mental clarity, energy, hormonal balance, digestion, immunity, stress relief, weight management, and joint mobility. Now, I share these discoveries based on real science and practical results.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#fatigue" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Descubra soluções naturais para energia">
+                            Discover Solutions
+                        </a>                    
+                    </div>
                 </div>
                 <div class="lg:w-1/2">
                     <div class="relative">
-                        <img src="https://purelyvital.github.io/purelyvital/img/frasco-natural-energy-joint-health-ingredients.webp" 
-                             alt="Clinical-strength natural supplements for energy and joint support" 
-                             class="w-full h-auto object-cover"
-                             loading="lazy">
+                        <div class="absolute -z-10 -top-6 -left-6 w-32 h-32 bg-green-100 rounded-full opacity-70"></div>
+                        <div class="relative overflow-hidden rounded-xl shadow-2xl border-4 border-white">
+                            <img src="https://purelyvital.github.io/purelyvital/img/frasco-natural-energy-joint-health-ingredients.webp" 
+                                 alt="Natural supplements and healthy ingredients for vitality" 
+                                 class="w-full h-auto object-cover"
+                                 loading="lazy">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Energy Solutions Section (Content Preserved, Enhanced Headings) -->
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Fatigue Section with Original Background -->
     <section id="fatigue" class="fatigue-bg text-white py-20 md:py-32 relative">
+        <div class="absolute inset-0 bg-black/30"></div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="max-w-3xl mx-auto text-center">
                 <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-                    <span class="text-green-300 font-medium font-poppins">NATURAL ENERGY FORMULAS</span>
+                    <span class="text-green-300 font-medium font-poppins">ENERGY SOLUTIONS</span>
                 </div>
                 <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight font-serif">When Fatigue Won't Go Away</h1>
-                <!-- Rest of your content remains identical -->
+                <p class="text-xl mb-8 max-w-2xl mx-auto leading-relaxed font-poppins">Find out why your energy feels drained. And how a natural approach could help you regain balance and vitality over time.</p>
+                <a href="https://heroichustle.com/b/order-now.php?aff_id=8843" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Solução natural para energia e vitalidade">
+                    Discover Natural Energy Solutions
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- All other sections remain structurally identical -->
-    <!-- Joint Health, Hearing Health, and Wellness sections preserved exactly as in your original -->
+    <!-- Fatigue Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    You know that feeling when you wake up already tired, like the night's rest just wasn't enough? Or when the day has barely started and you feel like you're running on empty — no energy for your workout, your work, or even the small everyday things?
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    This is more common than it seems, especially after 30 or when life gets a bit more demanding. And while it's easy to call it "just adulthood," the body has its quiet ways of asking for support.
+                </p>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 font-serif">What could be behind it?</h2>
+                    <p class="text-gray-700 font-poppins">
+                        Over time, internal changes — often subtle — begin to affect how we feel. Some of the most common signs include:
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <div class="benefit-item bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-bed text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 font-poppins">Constant fatigue</h3>
+                        </div>
+                        <p class="text-gray-600 font-poppins">You sleep, but wake up already feeling drained.</p>
+                    </div>
+                    
+                    <div class="benefit-item bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-fire text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 font-poppins">Lack of motivation</h3>
+                        </div>
+                        <p class="text-gray-600 font-poppins">Even things you used to enjoy now feel like a chore.</p>
+                    </div>
+                    
+                    <div class="benefit-item bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-brain text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 font-poppins">Built-up stress</h3>
+                        </div>
+                        <p class="text-gray-600 font-poppins">Your mind doesn't slow down, and your energy pays the price.</p>
+                    </div>
+                    
+                    <div class="benefit-item bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <div class="flex items-center mb-3">
+                            <div class="bg-green-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-bolt text-green-600"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800 font-poppins">Lower vitality</h3>
+                        </div>
+                        <p class="text-gray-600 font-poppins">That spark, confidence, and drive you used to feel seem distant.</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    These symptoms are often connected to hormonal imbalances, sluggish circulation, chronic stress, or low-grade inflammation that builds up over time.
+                </p>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 font-serif">What might help?</h2>
+                    <p class="text-gray-700 font-poppins">
+                        Some natural ingredients have been studied for their potential to gently support energy, balance, and well-being:
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">L-Arginine</h3>
+                        <p class="text-gray-600 font-poppins">Supports better circulation, which can boost both physical and mental energy.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Tongkat Ali</h3>
+                        <p class="text-gray-600 font-poppins">Traditionally used to support male vitality and hormonal balance.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Maca Root</h3>
+                        <p class="text-gray-600 font-poppins">Known for promoting natural energy and a healthy libido without sudden highs and crashes.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Ashwagandha</h3>
+                        <p class="text-gray-600 font-poppins">Helps the body adapt to stress, bringing more clarity and calm.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Horny Goat Weed</h3>
+                        <p class="text-gray-600 font-poppins">Supports circulation and physical performance in a natural way.</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    When combined thoughtfully, these ingredients can offer real support — in a gentle, gradual way that respects your body's rhythm.
+                </p>
+                
+                <div class="text-center mt-12">
+                    <a href="https://heroichustle.com/b/order-now.php?aff_id=8843" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Solução natural para energia com ingredientes cientificamente comprovados">
+                        <i class="fas fa-link mr-2"></i> Curious what's been working for others? Take a closer look
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer (Enhanced Link Titles) -->
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Joints Section with Original Background -->
+    <section id="joints" class="joints-bg text-white py-20 md:py-32 relative">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
+                    <span class="text-green-300 font-medium font-poppins">JOINT HEALTH</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight font-serif">Achy Joints?</h1>
+                <h2 class="text-3xl mb-8 font-poppins">Struggling with Joint Discomfort? Here's How to Find Relief Naturally</h2>
+                <a href="https://bg.feilaira.com/?aff_id=4775" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Solução natural para saúde articular">
+                    Discover Joint Support Solutions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Joints Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    If you're dealing with stiff, achy joints, you know how frustrating it can be to feel limited in your daily activities. Whether it's climbing stairs, enjoying a walk, or even getting out of bed, joint discomfort can make simple tasks feel daunting.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    Left unaddressed, inflammation and cartilage wear can worsen, leading to more persistent issues like arthritis. But the good news? You can take proactive steps to support your joint health naturally.
+                </p>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 font-serif">Actionable Solutions for Joint Relief</h2>
+                    <p class="text-gray-700 font-poppins">
+                        To ease joint discomfort, focus on reducing inflammation, supporting cartilage health, and improving flexibility. Here are key ingredients that can help, backed by their natural properties:
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Glucosamine Sulfate</h3>
+                        <p class="text-gray-600 font-poppins">This compound supports cartilage repair, helping to cushion joints and improve mobility.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Boswellia Extract</h3>
+                        <p class="text-gray-600 font-poppins">Known for its anti-inflammatory effects, Boswellia reduces swelling and enhances joint function.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Chondroitin Sulfate</h3>
+                        <p class="text-gray-600 font-poppins">By retaining water in cartilage, it boosts elasticity, reducing wear and tear.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Turmeric (Curcuma Longa)</h3>
+                        <p class="text-gray-600 font-poppins">A potent antioxidant, Turmeric soothes joints and promotes flexibility.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">MSM (Methylsulfonylmethane)</h3>
+                        <p class="text-gray-600 font-poppins">This sulfur compound reduces inflammation and supports tissue repair.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Bromelain</h3>
+                        <p class="text-gray-600 font-poppins">Derived from pineapples, this enzyme helps reduce inflammation and aids healing.</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    Incorporating these into your routine can make a big difference. For example, you might consider supplements that combine these ingredients for maximum effect, or explore dietary and lifestyle changes that include them.
+                </p>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 font-serif">Alternative Ways to Support Joint Health</h2>
+                    <p class="text-gray-700 font-poppins">
+                        If you prefer a non-supplement approach, you can still benefit from these ingredients through diet and habits:
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Add Turmeric to Your Meals</h3>
+                        <p class="text-gray-600 font-poppins">Sprinkle turmeric into soups, smoothies, or teas for its anti-inflammatory benefits. Pair it with black pepper to enhance absorption.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Eat Pineapple for Bromelain</h3>
+                        <p class="text-gray-600 font-poppins">Fresh pineapple is a tasty source of Bromelain, which can help reduce joint inflammation.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Focus on Sulfur-Rich Foods</h3>
+                        <p class="text-gray-600 font-poppins">Foods like garlic, onions, and cruciferous vegetables (broccoli, cauliflower) provide sulfur, similar to MSM, to support joint repair.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Stay Active</h3>
+                        <p class="text-gray-600 font-poppins">Low-impact exercises like swimming or yoga improve flexibility and strengthen muscles around joints, complementing the effects of these ingredients.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 font-serif">A Natural Option to Consider</h2>
+                    <p class="text-gray-700 font-poppins">
+                        For those looking for a convenient way to get these benefits, I've heard great things about Feilaira. It's an all-natural supplement that combines Boswellia, MSM, Turmeric, Glucosamine, and more to target inflammation and support joint mobility.
+                    </p>
+                </div>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    People say it's helped them move more freely without feeling like they're relying on harsh chemicals. It's just one option, but it seems to resonate with those seeking natural relief.
+                </p>
+                
+                <div class="text-center mt-12">
+                    <a href="https://bg.feilaira.com/?aff_id=4775" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Fórmula natural para saúde das articulações">
+                        <i class="fas fa-link mr-2"></i> Discover Feilaira's Natural Formula for Joint Support
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Hearing Section with Original Background -->
+    <section id="hearing" class="hearing-bg text-white py-20 md:py-32 relative">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
+                    <span class="text-green-300 font-medium font-poppins">HEARING HEALTH</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight font-serif">Your ears deserve the best</h1>
+                <h2 class="text-3xl mb-8 font-poppins">How to Naturally Support Your Hearing Before It's Too Late</h2>
+                <a href="https://www.audisoothe.com/b/order-now.php?aff_id=5607" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Solução natural para saúde auditiva">
+                    Learn About Hearing Support
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hearing Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    Let's be honest: hearing issues sneak up on us.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    One day you're asking people to repeat themselves more often. The next, you're avoiding social events because conversations have become exhausting. Maybe you've noticed ringing in your ears (tinnitus) or you're struggling with memory and focus too. These signs aren't just frustrating — they can deeply impact your quality of life.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    Worse yet, if left unchecked, hearing problems can lead to cognitive decline, increased isolation, and even a higher risk of dementia. But here's the good news: you're not powerless, and hearing loss doesn't have to be inevitable.
+                </p>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 font-serif">Natural Steps to Help Safeguard Your Hearing</h2>
+                    <p class="text-gray-700 font-poppins">
+                        You don't need invasive treatments or bulky devices to start protecting your ears today. There are natural, science-backed ingredients that support both ear and brain health when used consistently.
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="ingredient-card bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Maca Root</h3>
+                        <p class="text-gray-600 font-poppins">Known to enhance energy and support overall vitality, which may benefit circulation and cellular health.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Grape Seed Extract</h3>
+                        <p class="text-gray-600 font-poppins">Rich in antioxidants that help fight free radicals, protecting sensitive ear cells from oxidative stress.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Green Tea</h3>
+                        <p class="text-gray-600 font-poppins">Promotes better blood flow, which is critical for nourishing the auditory system.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Capsicum Annuum (Cayenne)</h3>
+                        <p class="text-gray-600 font-poppins">Supports healthy inflammation responses, which can help ease inner ear irritation.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Gymnema Sylvestre</h3>
+                        <p class="text-gray-600 font-poppins">Traditionally used for nerve support, it may contribute to clearer signal transmission between the ear and brain.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">GABA</h3>
+                        <p class="text-gray-600 font-poppins">A natural neurotransmitter that supports relaxation and may ease anxiety, commonly associated with hearing issues like tinnitus.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 font-serif">Can You Find These Nutrients Outside of Supplements?</h2>
+                    <p class="text-gray-700 font-poppins">
+                        Absolutely. A diet high in antioxidants (like berries, green tea, and leafy greens), combined with regular exercise to improve circulation, can go a long way.
+                    </p>
+                </div>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    Mindfulness techniques and stress-reduction practices like meditation also support brain and hearing function through hormonal balance and better sleep.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    However, getting the right dose of all these nutrients daily — in the proper combinations — can be tough, especially if your schedule doesn't allow for constant meal prepping or if you're already noticing signs of hearing decline.
+                </p>
+                
+                <div class="bg-green-50 border-l-4 border-green-500 p-6 rounded-r-lg mb-12">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 font-serif">What I Recommend as a Specialist (and Why It Stands Out)</h2>
+                    <p class="text-gray-700 font-poppins">
+                        After years researching natural solutions for hearing support, I came across a formula that brings together many of the most well-studied ingredients in this field.
+                    </p>
+                </div>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    It's called Audifort — a thoughtful blend of over 20 natural compounds, including several I mentioned earlier. It was developed not only to help protect hearing, but also to support cognitive clarity and the health of the auditory nerves.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    What sets it apart is that it doesn't promise overnight miracles. Instead, it offers a well-balanced, evidence-informed approach using nutrients your body already recognizes — and many people are seeing meaningful, progressive improvements.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    So if you're looking for a natural way to care for your hearing health, this is definitely worth looking into.
+                </p>
+                
+                <div class="text-center mt-12">
+                    <a href="https://www.audisoothe.com/b/order-now.php?aff_id=5607" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Suplemento natural para saúde auditiva Audifort">
+                        <i class="fas fa-link mr-2"></i> Learn more about Audifort here, if you're interested
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Joint Pain Section with Original Background -->
+    <section id="joint-pain" class="joint-pain-bg text-white py-20 md:py-32 relative">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-block bg-white/20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
+                    <span class="text-green-300 font-medium font-poppins">JOINT WELLNESS</span>
+                </div>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 leading-tight font-serif">Joint pain?</h1>
+                <h2 class="text-3xl mb-8 font-poppins">Hidden causes and natural solutions that actually work</h2>
+                <a href="https://jointgenesis.net/tsl-cb/?aff_id=85959" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Alívio natural para dores articulares">
+                    Explore Joint Pain Solutions
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Joint Pain Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    Waking up with stiff joints, feeling pain when walking, or discomfort when climbing stairs might seem like a normal part of aging — but these are signs your body is asking for support.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    As we age, joints lose lubrication, cartilage wears down, and inflammation becomes more frequent. All of this leads to pain, reduced mobility, and that constant feeling of tightness or heaviness in the joints.
+                </p>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    Fortunately, certain natural compounds have been studied for their ability to support joint health:
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Hyaluronic acid (Mobilee®)</h3>
+                        <p class="text-gray-600 font-poppins">A substance naturally produced by the body, but which decreases over time. Supplementing it can help restore joint lubrication and reduce friction between bones, easing stiffness.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Boswellia Serrata</h3>
+                        <p class="text-gray-600 font-poppins">A traditional herbal remedy known for its powerful anti-inflammatory properties. It helps reduce swelling and joint pain without the side effects often seen with synthetic medications.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Ginger</h3>
+                        <p class="text-gray-600 font-poppins">A natural anti-inflammatory that also improves circulation and relieves pain, making it helpful for joint recovery.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">French maritime pine bark</h3>
+                        <p class="text-gray-600 font-poppins">Rich in antioxidants, it helps protect joints from oxidative damage and supports long-term inflammation control.</p>
+                    </div>
+                    
+                    <div class="ingredient-card bg-white p-6 rounded-xl shadow-md border border-gray-100 hover:border-green-200">
+                        <h3 class="text-xl font-semibold text-green-700 mb-3 font-poppins">Piperine</h3>
+                        <p class="text-gray-600 font-poppins">Extracted from black pepper, this compound boosts the absorption of other nutrients, increasing the overall effectiveness of joint-support formulas.</p>
+                    </div>
+                </div>
+                
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed font-poppins">
+                    The good news is that there are already natural supplements that combine all of these ingredients in a safe and balanced way — offering a smarter, gentler approach to joint discomfort.
+                </p>
+                
+                <div class="text-center mt-12">
+                    <a href="https://jointgenesis.net/tsl-cb/?aff_id=85959" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Fórmula natural para dores nas articulações">
+                        <i class="fas fa-link mr-2"></i> Take a look at what's been helping others with similar symptoms
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between">
                 <div class="mb-8 md:mb-0">
-                    <p class="text-gray-400 max-w-md font-poppins">Science-Backed Natural Wellness Solutions</p>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="bg-green-600 rounded-lg p-2">
+                            <i class="fas fa-leaf text-white text-xl"></i>
+                        </div>
+                        <span class="text-2xl font-bold text-green-400 font-serif">Purely<span class="text-green-300">Vital</span></span>
+                    </div>
+                    <p class="text-gray-400 max-w-md font-poppins">A Return to What Matters
+We believe in a life with more clarity, lightness, and vitality. No magic formulas, no empty promises. Just science, nature, and integrity in everything we do. Here, you'll find more than supplements, you'll find a path back to what matters most: taking care of yourself with presence, respect, and awareness.</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vitall no Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vitall no Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vitall no Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vitall no Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
                     <div>
-                        <h4 class="text-lg font-semibold mb-4 font-poppins">Solutions</h4>
+                        <h4 class="text-lg font-semibold mb-4 font-poppins">Quick Links</h4>
                         <ul class="space-y-2">
-                            <li><a href="#fatigue" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Natural energy and fatigue supplements">Energy Support</a></li>
-                            <!-- Other links... -->
+                            <li><a href="#fatigue" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Soluções para energia e fadiga">Fatigue</a></li>
+                            <li><a href="#joints" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Saúde articular natural">Joint Health</a></li>
+                            <li><a href="#hearing" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Saúde auditiva natural">Hearing</a></li>
+                            <li><a href="#joint-pain" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Bem-estar e alívio natural">Joint Pain</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 font-poppins">Resources</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Blog sobre saúde natural">Blog</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Pesquisas científicas">Research</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Perguntas frequentes">FAQs</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Entre em contato">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4 font-poppins">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Política de Privacidade">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Termos de Serviço">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Aviso Legal">Disclaimer</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-green-400 transition font-poppins" title="Política de Envio">Shipping Policy</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 font-poppins">
+                <p>&copy; 2023 Purely Vitall. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Your existing scripts -->
+    <noscript>
+        <div class="fixed top-0 left-0 right-0 bg-yellow-100 text-yellow-800 p-4 text-center z-50">
+            Para uma melhor experiência em nosso site, recomendamos ativar o JavaScript em seu navegador. JavaScript é necessário para alguns recursos do site funcionarem corretamente.
+        </div>
+    </noscript>
+
     <script>
-        // All JavaScript remains unchanged
+        // Simple mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('right-4');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('rounded-lg');
+            nav.classList.toggle('shadow-lg');
+            nav.classList.toggle('space-y-4');
+            nav.classList.toggle('space-x-0');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     </script>
 </body>
 </html>
