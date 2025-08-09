@@ -2,30 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://purelyvital.github.io/purelyvital/</loc>
-    <lastmod>2024-05-20</lastmod>
+    <lastmod>2023-12-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://purelyvital.github.io/purelyvital/energy</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://purelyvital.github.io/purelyvital/#fatigue</loc>
+    <lastmod>2023-12-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://purelyvital.github.io/purelyvital/joints</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://purelyvital.github.io/purelyvital/#joints</loc>
+    <lastmod>2023-12-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://purelyvital.github.io/purelyvital/hearing</loc>
-    <lastmod>2024-05-20</lastmod>
+    <loc>https://purelyvital.github.io/purelyvital/#hearing</loc>
+    <lastmod>2023-12-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
-<<<<<<< HEAD
+  <url>
+    <loc>https://purelyvital.github.io/purelyvital/#joint-pain</loc>
+    <lastmod>2023-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
-=======
-</urlset>
->>>>>>> ca9b43787b977621f96525a366bf61aa38e82774
