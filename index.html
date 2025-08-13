@@ -52,56 +52,16 @@
     }
     </script>
     
-    <!-- Preconnect to important third-party domains -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
-    <!-- Preload critical fonts -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
-    
-    <!-- Preload critical CSS -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
-    
-    <!-- Load Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Inline critical CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Critical CSS for above-the-fold content */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #f8fafc;
-            margin: 0;
-            padding: 0;
-        }
-        .font-serif {
-            font-family: 'Playfair Display', serif;
-        }
-        .font-sans {
-            font-family: 'Montserrat', sans-serif;
-        }
-        .font-poppins {
-            font-family: 'Poppins', sans-serif;
-        }
-        header {
-            position: sticky;
-            top: 0;
-            background-color: white;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            z-index: 50;
-        }
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
                         url('https://purelyvital.github.io/purelyvital/img/capa-supplier-natural-supplements-energy-joint-health-wellbeing.webp');
             background-size: cover;
             background-position: center;
-            color: white;
         }
-        
-        /* Deferred CSS (non-critical) */
         .nature-pattern {
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
@@ -146,36 +106,15 @@
             background-position: center;
         }
         
-        /* Lazy loading for images */
-        img.lazy {
-            opacity: 0;
-            transition: opacity 0.3s;
+        /* Classes para tipografia (mantendo tamanhos originais) */
+        .font-serif {
+            font-family: 'Playfair Display', serif;
         }
-        img.lazy.loaded {
-            opacity: 1;
+        .font-sans {
+            font-family: 'Montserrat', sans-serif;
         }
-        
-        /* Focus styles for accessibility */
-        a:focus, button:focus {
-            outline: 2px solid #4f46e5;
-            outline-offset: 2px;
-        }
-        
-        /* Print styles */
-        @media print {
-            .no-print {
-                display: none !important;
-            }
-            body {
-                font-size: 12pt;
-                background: none;
-                color: #000;
-            }
-            a::after {
-                content: " (" attr(href) ")";
-                font-size: 0.8em;
-                font-weight: normal;
-            }
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
@@ -186,28 +125,28 @@
             <div class="flex justify-between items-center">
                 <div class="flex items-center space-x-3">
                     <div class="bg-green-600 rounded-lg p-2 shadow-md">
-                        <i class="fas fa-leaf text-white text-xl" aria-hidden="true"></i>
+                        <i class="fas fa-leaf text-white text-xl"></i>
                     </div>
                     <span class="text-2xl font-bold text-green-800 font-serif">Purely<span class="text-green-600">Vital</span></span>
                 </div>
                 
                 <nav class="hidden md:flex space-x-4">
                     <a href="#fatigue" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Natural solutions for energy and vitality">
-                        <i class="fas fa-bolt mr-2 text-green-500" aria-hidden="true"></i> Energy
+                        <i class="fas fa-bolt mr-2 text-green-500"></i> Energy
                     </a>
                     <a href="#joints" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Joint health and mobility">
-                        <i class="fas fa-bone mr-2 text-green-500" aria-hidden="true"></i> Joints
+                        <i class="fas fa-bone mr-2 text-green-500"></i> Joints
                     </a>
                     <a href="#hearing" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Natural hearing health">
-                        <i class="fas fa-ear-listen mr-2 text-green-500" aria-hidden="true"></i> Hearing
+                        <i class="fas fa-ear-listen mr-2 text-green-500"></i> Hearing
                     </a>
                     <a href="#joint-pain" class="text-gray-700 hover:text-green-600 transition font-medium px-3 py-2 rounded-lg hover:bg-green-50" title="Wellness and natural relief">
-                        <i class="fas fa-hand-holding-medical mr-2 text-green-500" aria-hidden="true"></i> Wellness
+                        <i class="fas fa-hand-holding-medical mr-2 text-green-500"></i> Wellness
                     </a>
                 </nav>
                 
-                <button class="md:hidden text-gray-700 hover:text-green-600 transition" aria-label="Mobile menu" aria-expanded="false" aria-controls="mobile-menu">
-                    <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+                <button class="md:hidden text-gray-700 hover:text-green-600 transition" aria-label="Mobile menu">
+                    <i class="fas fa-bars text-2xl"></i>
                 </button>
             </div>
         </div>
@@ -231,7 +170,9 @@
                         <br>
                         Driven by curiosity and a deep respect for natural healing, I dedicated years to studying how the human body thrives through holistic and science-backed care. Throughout this journey, I discovered powerful, effective natural supplement formulas designed to promote mental clarity, boost energy levels, support hormonal balance, improve digestion, strengthen the immune system, reduce stress, aid in healthy weight management, and enhance joint mobility and flexibility.
 
-These evidence-based solutions are crafted to help you achieve lasting wellness and vitality. Today, I'm excited to share these insights and real results to empower you on your path to optimal health and natural well-being.
+These evidence-based solutions are crafted to help you achieve lasting wellness and vitality. Today, I’m excited to share these insights and real results to empower you on your path to optimal health and natural well-being.
+
+
                     </p>
                     <div class="flex flex-wrap gap-4">
                         <a href="#fatigue" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Discover natural solutions for energy">
@@ -245,10 +186,8 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                         <div class="relative overflow-hidden rounded-xl shadow-2xl border-4 border-white">
                             <img src="https://purelyvital.github.io/purelyvital/img/frasco-natural-energy-joint-health-ingredients.webp" 
                                  alt="Natural supplements and healthy ingredients for vitality" 
-                                 class="w-full h-auto object-cover lazy"
-                                 loading="lazy"
-                                 width="600"
-                                 height="400">
+                                 class="w-full h-auto object-cover"
+                                 loading="lazy">
                         </div>
                     </div>
                 </div>
@@ -298,7 +237,7 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                     <div class="benefit-item bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
                         <div class="flex items-center mb-3">
                             <div class="bg-green-100 p-2 rounded-full mr-4">
-                                <i class="fas fa-bed text-green-600" aria-hidden="true"></i>
+                                <i class="fas fa-bed text-green-600"></i>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800 font-poppins">Constant fatigue</h3>
                         </div>
@@ -308,7 +247,7 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                     <div class="benefit-item bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
                         <div class="flex items-center mb-3">
                             <div class="bg-green-100 p-2 rounded-full mr-4">
-                                <i class="fas fa-fire text-green-600" aria-hidden="true"></i>
+                                <i class="fas fa-fire text-green-600"></i>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800 font-poppins">Lack of motivation</h3>
                         </div>
@@ -318,7 +257,7 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                     <div class="benefit-item bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
                         <div class="flex items-center mb-3">
                             <div class="bg-green-100 p-2 rounded-full mr-4">
-                                <i class="fas fa-brain text-green-600" aria-hidden="true"></i>
+                                <i class="fas fa-brain text-green-600"></i>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800 font-poppins">Built-up stress</h3>
                         </div>
@@ -328,7 +267,7 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                     <div class="benefit-item bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-green-200">
                         <div class="flex items-center mb-3">
                             <div class="bg-green-100 p-2 rounded-full mr-4">
-                                <i class="fas fa-bolt text-green-600" aria-hidden="true"></i>
+                                <i class="fas fa-bolt text-green-600"></i>
                             </div>
                             <h3 class="text-xl font-semibold text-gray-800 font-poppins">Lower vitality</h3>
                         </div>
@@ -380,7 +319,7 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                 
                 <div class="text-center mt-12">
                     <a href="https://heroichustle.com/b/order-now.php?aff_id=8843" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Natural energy solution with scientifically proven ingredients">
-                        <i class="fas fa-link mr-2" aria-hidden="true"></i> Curious what's been working for others? Take a closer look
+                        <i class="fas fa-link mr-2"></i> Curious what's been working for others? Take a closer look
                     </a>
                 </div>
             </div>
@@ -503,7 +442,7 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                 
                 <div class="text-center mt-12">
                     <a href="https://bg.feilaira.com/?aff_id=4775" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Natural joint health formula">
-                        <i class="fas fa-link mr-2" aria-hidden="true"></i> Discover Feilaira's Natural Formula for Joint Support
+                        <i class="fas fa-link mr-2"></i> Discover Feilaira's Natural Formula for Joint Support
                     </a>
                 </div>
             </div>
@@ -616,7 +555,7 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                 
                 <div class="text-center mt-12">
                     <a href="https://www.audisoothe.com/b/order-now.php?aff_id=5607" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Natural hearing health supplement Audifort">
-                        <i class="fas fa-link mr-2" aria-hidden="true"></i> Learn more about Audifort here, if you're interested
+                        <i class="fas fa-link mr-2"></i> Learn more about Audifort here, if you're interested
                     </a>
                 </div>
             </div>
@@ -690,7 +629,7 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                 
                 <div class="text-center mt-12">
                     <a href="https://jointgenesis.net/tsl-cb/?aff_id=85959" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition duration-300 transform hover:scale-105 shadow-lg font-poppins" title="Natural formula for joint pain">
-                        <i class="fas fa-link mr-2" aria-hidden="true"></i> Take a look at what's been helping others with similar symptoms
+                        <i class="fas fa-link mr-2"></i> Take a look at what's been helping others with similar symptoms
                     </a>
                 </div>
             </div>
@@ -704,17 +643,17 @@ These evidence-based solutions are crafted to help you achieve lasting wellness 
                 <div class="mb-8 md:mb-0">
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="bg-green-600 rounded-lg p-2">
-                            <i class="fas fa-leaf text-white text-xl" aria-hidden="true"></i>
+                            <i class="fas fa-leaf text-white text-xl"></i>
                         </div>
                         <span class="text-2xl font-bold text-green-400 font-serif">Purely<span class="text-green-300">Vital</span></span>
                     </div>
                     <p class="text-gray-400 max-w-md font-poppins">A Return to What Matters
 We believe in a life with more clarity, lightness, and vitality. No magic formulas, no empty promises. Just science, nature, and integrity in everything we do. Here, you'll find more than supplements, you'll find a path back to what matters most: taking care of yourself with presence, respect, and awareness.</p>
                     <div class="flex space-x-4 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vital on Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i><span class="sr-only">Facebook</span></a>
-                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vital on Twitter"><i class="fab fa-twitter" aria-hidden="true"></i><span class="sr-only">Twitter</span></a>
-                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vital on Instagram"><i class="fab fa-instagram" aria-hidden="true"></i><span class="sr-only">Instagram</span></a>
-                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vital on Pinterest"><i class="fab fa-pinterest" aria-hidden="true"></i><span class="sr-only">Pinterest</span></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vital on Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vital on Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vital on Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-green-400 transition" title="Purely Vital on Pinterest"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
@@ -748,7 +687,7 @@ We believe in a life with more clarity, lightness, and vitality. No magic formul
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 font-poppins">
-                <p>&copy; <span id="current-year">2023</span> Purely Vital. All rights reserved.</p>
+                <p>&copy; 2023 Purely Vital. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -759,75 +698,30 @@ We believe in a life with more clarity, lightness, and vitality. No magic formul
         </div>
     </noscript>
 
-    <!-- Deferred JavaScript -->
     <script>
-        // Load non-critical CSS
-        function loadCSS(href) {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = href;
-            document.head.appendChild(link);
-        }
-        
-        // Lazy load images
-        document.addEventListener("DOMContentLoaded", function() {
-            // Update copyright year
-            document.getElementById('current-year').textContent = new Date().getFullYear();
-            
-            // Lazy load images
-            const lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-            if ("IntersectionObserver" in window) {
-                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-                    entries.forEach(function(entry) {
-                        if (entry.isIntersecting) {
-                            let lazyImage = entry.target;
-                            lazyImage.src = lazyImage.dataset.src;
-                            lazyImage.classList.remove("lazy");
-                            lazyImage.classList.add("loaded");
-                            lazyImageObserver.unobserve(lazyImage);
-                        }
-                    });
-                });
+        // Simple mobile menu toggle
+        document.querySelector('button').addEventListener('click', function() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('absolute');
+            nav.classList.toggle('top-16');
+            nav.classList.toggle('right-4');
+            nav.classList.toggle('bg-white');
+            nav.classList.toggle('p-4');
+            nav.classList.toggle('rounded-lg');
+            nav.classList.toggle('shadow-lg');
+            nav.classList.toggle('space-y-4');
+            nav.classList.toggle('space-x-0');
+        });
 
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImageObserver.observe(lazyImage);
-                });
-            } else {
-                // Fallback for browsers without IntersectionObserver
-                lazyImages.forEach(function(lazyImage) {
-                    lazyImage.src = lazyImage.dataset.src;
-                    lazyImage.classList.remove("lazy");
-                    lazyImage.classList.add("loaded");
-                });
-            }
-            
-            // Mobile menu toggle
-            document.querySelector('button[aria-label="Mobile menu"]').addEventListener('click', function() {
-                const nav = document.querySelector('nav');
-                const expanded = this.getAttribute('aria-expanded') === 'true';
-                this.setAttribute('aria-expanded', !expanded);
-                
-                nav.classList.toggle('hidden');
-                nav.classList.toggle('flex');
-                nav.classList.toggle('flex-col');
-                nav.classList.toggle('absolute');
-                nav.classList.toggle('top-16');
-                nav.classList.toggle('right-4');
-                nav.classList.toggle('bg-white');
-                nav.classList.toggle('p-4');
-                nav.classList.toggle('rounded-lg');
-                nav.classList.toggle('shadow-lg');
-                nav.classList.toggle('space-y-4');
-                nav.classList.toggle('space-x-0');
-            });
-
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
             });
         });
